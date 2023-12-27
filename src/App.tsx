@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import Router from "./Router";
 import CyclesContextProvider from "./contexts/CyclesContext";
@@ -8,11 +8,11 @@ import defaultTheme from "./styles/themes/default";
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
+      <HashRouter>
         <CyclesContextProvider>
           <Router />
         </CyclesContextProvider>
-      </BrowserRouter>
+      </HashRouter>
       <GlobalStyle />
     </ThemeProvider>
   );
